@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial, sans-serif'; /*spedic Google font to be found later*/
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    background-color: white;
+    width: 800px; /*Adjust based on the larger image */
+    padding: 40px
+}
