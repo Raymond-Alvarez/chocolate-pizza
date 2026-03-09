@@ -8,10 +8,74 @@ body {
     font-family: 'Arial, sans-serif'; /*spedic Google font to be found later*/
     display: flex;
     justify-content: center;
+    flex-direction: column; /* This stacks Header, Main, and Footer vertically */
+    align-items: center; /* This centers those stacks on the screen */
+    background-color: #f2f2f2;
 }
 
 main {
     background-color: white;
-    width: 800px; /*Adjust based on the larger image */
-    padding: 40px
+    width: 1500px; /*Adjust based on the larger image */
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /*pushes logo left ad icons right */
+    align-items: center; /*ceners them vertically */
+    padding: 20px 0;
+    border-bottom: 2px solid #eee; /* A subtle line until add the wavy one */
+    flex-wrap: wrap; /* Keeps things safe if the screen gets small */
+}
+
+header, footer {
+    width: 1500px; /* Matches the main content width */
+    margin: 0 auto; /* Centers them on the page */
+}
+
+#right-header img {
+    margin-left: 10px; /* Adds a bit of space between the icons */
+    height: 25px; /*Keeps icons uniform */
+    cursor: pointer; /*Indicates they are clickable */
+}
+
+.wavy-line {
+    display: block; /* Forces it to its own line, breaking out of the flex row */
+    width: 10%; /* Stretches it across the whole header */
+    margin-top: 20px; /* Gives the icons some breathing room */
+}
+
+#recipe-title h1 {
+    font-size: 3rem; /* Makes the title big and bold */
+    margin-top: 40px; 
+    text-transform: uppercase;
+}
+
+.subtitle-container {
+    display: flex;
+    justify-content: space-between; /* Pushes date left and print right */
+    align-items: center; /* Centers them vertically */
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-top: 10px; /* Adds some space below the title */
+    color: #888; /* Makes the text a lighter gray */
+    font-size: 0.9rem
+}
+
+#ingredients-list {
+    background-image: url('...img/ingredients-bg.png');
+    background-repeat: repeat;
+    padding: 50px; 
+    margin: 40px 0;
+    font-family: 'Indie FFlower', cursive; /* speicif font tbd */
+}
+
+#ingredients-list ul {
+    list-style-type: none; /* Removes default bullet points */
+}
+
+#ingredients-list li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 5px;
 }
