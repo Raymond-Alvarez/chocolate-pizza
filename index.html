@@ -1,86 +1,110 @@
-<!DOCTRYPTE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Chocolate Pizza </title>
+    <title>Chocolate Pizza</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-        <header>
-            <div id="left-header">
-                <img src="img/logo.png" alt="Delicous Logo">
-            </div>
+    <header>
+        <div id="left-header">
+            <img src="img/logo.png" alt="Delicious Logo">
+        </div>
 
-            <div id="right-header">
-                <img src="img/fb-icon.png" alt="Facebook">
-                <img src="img/twit-icon.png" alt="Twitter">
-                <img src="img/gp-icon.png" alt="Google Plus">
-                <img src="img/insta-icon.png" alt="Flickr"> 
-                <img src="img/pint-icon.png" alt="Pinterest">
-                <img src="img/rss-icon.png" alt="RSS">
-                <img src="img/mail-icon.png" alt="Mail">
-            </div>
+        <div id="right-header">
+            <img src="img/fb-icon.png" alt="Facebook">
+            <img src="img/twit-icon.png" alt="Twitter">
+            <img src="img/gp-icon.png" alt="Google Plus">
+            <img src="img/insta-icon.png" alt="Instagram">
+            <img src="img/pint-icon.png" alt="Pinterest">
+            <img src="img/rss-icon.png" alt="RSS">
+            <img src="img/mail-icon.png" alt="Mail">
+        </div>
 
-            <div class="diagonal-border"></div>
-        </header>
+        <!-- Diagonal border stripe sits inside header so it spans full width -->
+        <div class="diagonal-border"></div>
+    </header>
 
-        <main>
-            <section id="recipe-title">
-                <h1>Chocolate Pizza</h1>
-                <div class="subtitle-container">
-                    <p class="date-text">Posted on 15 DEC 2013 / DESSERTS</p>
-                    <div class="print-container">
-                        <img src="img/print-icon.png" alt="Print Icon">
-                        <span>Print</span>
-                    </div>
+    <main>
+
+        <!-- RECIPE TITLE SECTION -->
+        <section id="recipe-title">
+            <h1>Chocolate Pizza</h1>
+            <div class="subtitle-container">
+                <p class="date-text">Posted on 15 DEC 2013 / DESSERTS</p>
+                <div class="print-container">
+                    <img src="img/print-icon.png" alt="Print Icon">
+                    <span>Print</span>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="hero-image">
-                <img src="img/choco-pizza.png" alt="Delicous Chocoloate Pizza">
-            </section>
+        <!-- HERO IMAGE -->
+        <section id="hero-image">
+            <img src="img/choco-pizza.png" alt="Delicious Chocolate Pizza">
+        </section>
 
-            <article>
-                <p>FOr the fig-swirl...</p>
-                <p>Ice cream: INa small pot...</p>
-                <p>Using an ice cream machine...></p>
-            </article>
+        <!-- RECIPE ARTICLE TEXT -->
+        <article>
+            <p>For the fig-swirl: Melt butter over medium heat in a saucepan. Add brown sugar and stir to dissolve. Halve all of the figs and toss in the saucepan with water and lemon juice. Cook over medium heat, stirring frequently, until you have a chunky-jammy mixture. Add salt with one or two stirs, set aside and let cool completely.</p>
+            <p>Ice cream: In a small pot over medium heat, combine milk, and granulated sugar until sugar is completely dissolved and the milk is just barely lukewarm. Whisk in the egg yolks. Set mixture in the fridge and wait until the fig mixture is cooled.</p>
+            <p>Using an ice cream machine, pour liquids into the frozen basin and process according to manufacturer instructions, i.e., let spin and thicken for 20 minutes before adding mascarpone, fig jam mixture, and the nuts. Continue to process for +/- 10 minutes. Pour semi-frozen mixture into a pyrex dish or glass tupperware. Freeze for at least two hours before serving.</p>
+        </article>
 
-            <section id="ingredients-list">
-                <ul>                    
-                    <li><input type="checkbox" checked> 1 1/2 cups milk</li>
-                    <li><input type="checkbox"> 1/2 cup heavy cream</li>
-                    <li><input type="checkbox"> 1/3 cup granulated sugar</li>
-                    <li><input type="checkbox"> 1/4 cup cocoa powder</li>
-                    <li><input type="checkbox"> 1 tsp vanilla extract</li>
-                    <li><input type="checkbox"> 2 egg yolks</li>
-                    <li><input type="checkbox"> 1/2 lb bittersweet chocolate</li>
-                    <li><input type="checkbox"> 1/4 cup honey</li>
-                    <li><input type="checkbox"> 1/2 cup mascarpone cheese</li>
-                    <li><input type="checkbox"> 1/4 cup heavy cream (for swirl)</li>
-                    <li><input type="checkbox"> 8 oz fig jam</li>
-                    <li><input type="checkbox"> 1/4 cup pistachios, chopped</li>            
-                </ul>                
-            </section>
+        <!-- INGREDIENTS LIST — two columns using a table -->
+        <section id="ingredients-list">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label><input type="checkbox"> 1 1/2 cups milk</label></td>
+                        <td><label><input type="checkbox"> 1 1/2 cups heavy cream</label></td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"> 1/2 cup mascarpone</label></td>
+                        <td><label><input type="checkbox" checked> 1/3 granulated sugar</label></td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"> 1/2 tsp pink salt</label></td>
+                        <td><label><input type="checkbox" checked> 2 egg yolks</label></td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"> 1 lb Black Mission Figs</label></td>
+                        <td><label><input type="checkbox"> 1 lemon, juiced</label></td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"> 1/2 cup brown sugar</label></td>
+                        <td><label><input type="checkbox"> 2 tbsp butter</label></td>
+                    </tr>
+                    <tr>
+                        <td><label><input type="checkbox"> 2-4 tbsp water</label></td>
+                        <td><label><input type="checkbox"> 1 cup honey roasted pecans, roughly chopped</label></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-            <hr>
+        <hr>
 
-            <section id="author-bio">
-                <img src="img/van-pic.png" alt="Vanessa Stevenson">
+        <!-- AUTHOR BIO -->
+        <section id="author-bio">
+            <img src="img/van-pic.png" alt="Vanessa Stevenson">
+            <div id="author-info">
                 <h3>Vanessa Stevenson</h3>
-                <p>Food enthusiast, photography fan...</p>
-                <button>SHARE RECIPE</button>
-            </section>
-        </main>
-            <footer>
-                <p>Delicous &copy; 2013 · All Rights Reserved</p>
-            </footer>
+                <p>Food enthusiast, photography fan. Add a pinch of raw foodism and that's pretty much who I am.</p>
+            </div>
+            <button>SHARE RECIPE</button>
+        </section>
 
+    </main>
 
+    <footer>
+        <p>Delicious &copy; 2013 · All Rights Reserved</p>
+        <p>Proudly published with Ghost.</p>
+    </footer>
 
+    <!-- JavaScript loaded at bottom so HTML exists before JS runs -->
+    <script src="js/app.js"></script>
 
-        
 </body>
-    
 </html>

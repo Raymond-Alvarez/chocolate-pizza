@@ -1,40 +1,39 @@
+/* ============================================================
+   RESET
+   ============================================================ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ============================================================
+   BODY
+   ============================================================ */
 body {
-    font-family: 'Arial, sans-serif'; /*spedic Google font to be found later*/
+    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    flex-direction: column; /* This stacks Header, Main, and Footer vertically */
-    align-items: center; /* This centers those stacks on the screen */
-    background-color: #fff; 
-}
-
-main {
-    background-color: #fff;
-
-    width: 800px; /*Adjust based on the larger image */
-    padding: 40px; /* This adds internal space so text doesn't hit the edges */
-    /* margin-top: 10px; */
-}
-#hero-image img {
-    width: 100%;    /* This stretches the image to exactly 800px */
-    height: auto;   /* Keeps the pizza from looking squished */
-    display: block;
-}
-
-header {
-    width: 800px;         /* Match the width of your main content */
-    margin: 0 auto;       /* Centers the entire header on the page */
-    display: flex;
-    justify-content: space-between; 
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap; /* Allows the header to wrap on smaller screens and This is the key to letting the wavy line drop below */ 
+    background-color: #fff;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+header {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     padding: 20px 0 0 0;
-    border-bottom: none;
+}
+
+#left-header img {
+    height: 50px;
+    width: auto;
 }
 
 #right-header {
@@ -42,43 +41,40 @@ header {
     align-items: center;
 }
 
-header, footer {
-    width: 800px; /* Matches the main content width */
-    margin: 0 auto; /* Centers them on the page */
-}
-
 #right-header img {
-    margin-left: 10px; /* Adds a bit of space between the icons */
-    height: 25px; /*Keeps icons uniform */
-    cursor: pointer; /*Indicates they are clickable */
+    margin-left: 10px;
+    height: 25px;
+    cursor: pointer;
 }
 
+/* Diagonal stripe border under header */
 .diagonal-border {
     width: 800px;
-    height: 10px; /* Adjust height to match the pattern thickness */
-    background-image: url('../img/hr-img.png'); /* Use the diagonal stripe image */
-    background-repeat: repeat-x; /* This makes it tile horizontally */
+    height: 10px;
+    background-image: url('../img/hr-img.png');
+    background-repeat: repeat-x;
     margin-top: 20px;
 }
 
-header {
+/* ============================================================
+   MAIN
+   ============================================================ */
+main {
     width: 800px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Allows the border div to drop to the next line */
-    padding: 20px 0 0 0;
+    padding: 0 40px 40px 40px;
+    background-color: #fff;
 }
 
+/* ============================================================
+   RECIPE TITLE
+   ============================================================ */
 #recipe-title h1 {
-    font-family: 'Arial Narrow', sans-serif; /* Mimics the tall, condensed look */
+    font-family: 'Arial Narrow', Arial, sans-serif;
     font-size: 4rem;
     font-weight: 800;
     margin-top: 40px;
     margin-bottom: 5px;
-    letter-spacing: -1px; /* Tighter letter spacing like the image */
-    text-transform: none; /* The image isn't actually all-caps! */
+    letter-spacing: -1px;
 }
 
 .subtitle-container {
@@ -86,41 +82,23 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #eee; /* Light gray line under the subtitle */
+    border-bottom: 2px solid #eee;
     padding-bottom: 15px;
     margin-bottom: 20px;
 }
 
 .date-text {
-    color: #ababab; /* Soft light gray from the design */
+    color: #ababab;
     font-size: 0.8rem;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-#ingredients-list {
-    background-image: url('../img/list-bg.png');
-    background-repeat: repeat;
-    padding: 50px; 
-    margin: 40px 0;
-    font-family: 'Indie FFlower', cursive; /* speicif font tbd */
-}
-
-#ingredients-list ul {
-    list-style-type: none; /* Removes default bullet points */
-}
-
-#ingredients-list li {
-    margin-bottom: 15px;
-    border-bottom: 1px solid #e8e8e8;
-    padding-bottom: 5px;
-}
-
 .print-container {
     display: flex;
-    align-items: center;      /* Vertically aligns icon and text */
-    gap: 8px;                 /* The "surgical" fix for space between icon and text */
-    color: #ababab;           /* Matches the light gray metadata color */
+    align-items: center;
+    gap: 8px;
+    color: #ababab;
     font-weight: bold;
     font-size: 0.8rem;
     cursor: pointer;
@@ -128,6 +106,150 @@ header {
 }
 
 .print-container img {
-    height: 18px;             /* Keeps the icon small and professional */
+    height: 18px;
     width: auto;
+}
+
+/* ============================================================
+   HERO IMAGE
+   ============================================================ */
+#hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============================================================
+   ARTICLE TEXT
+   ============================================================ */
+article {
+    margin: 20px 0;
+}
+
+article p {
+    text-indent: 40px;       /* Indents first line like the preview */
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ============================================================
+   INGREDIENTS LIST
+   Two columns using a table inside a notebook background
+   ============================================================ */
+#ingredients-list {
+    background-image: url('../img/list-bg.png');
+    background-repeat: repeat;
+    padding: 30px 50px;
+    margin: 40px 0;
+}
+
+#ingredients-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#ingredients-list td {
+    width: 50%;              /* Each column takes exactly half */
+    padding: 8px 10px;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 0.95rem;
+    vertical-align: middle;
+}
+
+#ingredients-list label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;         /* Shows hand cursor — whole label is clickable */
+}
+
+#ingredients-list input[type="checkbox"] {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+/* STRETCH GOAL — strikethrough when checked */
+#ingredients-list input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    color: #ababab;
+}
+
+/* ============================================================
+   HR DIVIDER
+   ============================================================ */
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+/* ============================================================
+   AUTHOR BIO
+   ============================================================ */
+#author-bio {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+#author-bio img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;      /* Makes the author photo circular */
+    object-fit: cover;
+}
+
+#author-info {
+    flex: 1;                 /* Takes up all remaining space */
+}
+
+#author-info h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#author-info p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+#author-bio button {
+    background-color: #e8623a;   /* Orange from the preview */
+    color: #fff;
+    border: none;
+    padding: 14px 24px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    white-space: nowrap;         /* Prevents button text from wrapping */
+}
+
+#author-bio button:hover {
+    background-color: #d4502a;   /* Slightly darker on hover */
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+    width: 800px;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+    color: #ababab;
+    border-top: 1px solid #eee;
+    margin-top: 20px;        
+    align-self: center; 
+}
+
+footer p {
+    margin-bottom: 4px;
 }
